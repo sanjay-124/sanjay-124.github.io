@@ -782,6 +782,18 @@ img {
   color: var(--skill-name);
 }
 
+.skills__name2 {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-right: var(--mb-2);
+  margin-bottom: var(--mb-3);
+  padding: 0.25rem 0.5rem;
+  /* background-color: var(--white-color); */
+  border-radius: 0.3rem;
+  /* box-shadow: var(--shadow-i); */
+  color: var(--skill-name2);
+}
+
 .skills__name1 {
   display: inline-block;
   font-size: var(--small-font-size1);
