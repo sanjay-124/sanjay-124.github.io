@@ -1,500 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="google-site-verification" content="gbboCIIlLPMipBxgBvVtFTKE40RWFYONeLI6IDmHJ40" />
-
   <title>Sanjay Mannekote Revanna</title>
+  <meta name="description" content="Sanjay Mannekote Revanna — Business Management student at Lancaster University. Portfolio showcasing skills, projects, and achievements.">
+  <meta name="keywords" content="sanjay, sanjay mannekote revanna, portfolio, business management, lancaster university">
+  <meta name="author" content="Sanjay Mannekote Revanna">
 
-  <!-- ===== CSS ===== -->
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/animation.css">
-  <link rel="stylesheet" href="assets/css/media_query.css">
-  <link rel="stylesheet" href="assets/css/oldstyle.css">
-
-  <!-- ===== BOX ICONS ===== -->
-  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="icon" href="assets/img/bg removed s icon.png">
-  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-  <meta name="description" content="Hi! I'm Shravan, a full stack web developer. Explore my expertise in front-end and back-end development, see examples of my work, and learn more about my skills and experience. Let's collaborate on your next project">
-  <meta name="keywords" content="shravan, myselfshravan, shravanrevanna, revanna, shravangithubio, shravan portfolio, shravan revanna, shravan github">
-  <meta name="author" content="Shravan Revanna">
+  <link rel="icon" href="assets/img/bg removed s icon.png">
 
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/media_query.css">
 </head>
 
 <body>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 
-  <!-- Back to top button -->
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Sanjay</a>
 
-  <!--===== HEADER =====-->
-  <header class="l-header">
-    <nav class="nav bd-grid1">
-      <div>
-        <a href="https://linktr.ee/shravan_revanna" target="_blank" class="nav__logo">SANJAY</a>
-      </div>
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#skills" class="nav__link">Skills</a>
-          </li>
-          <li class="nav__item">
-            <a href="#likes" class="nav__link">Likes</a>
-          </li>
-          <li class="nav__item">
-            <a href="#projects" class="nav__link">Projects</a>
-          </li>
-          <li class="nav__item">
-            <a href="#education" class="nav__link">Education</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </div>
-      <div class="theme-icon">
-        <input type="checkbox" id="darkmode-toggle" class="btn-toggle" aria-label="toggle" />
-        <label for="darkmode-toggle">
-          <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 496 496" style="enable-background:new 0 0 496 496;" xml:space="preserve">
 
-            <rect x="152.994" y="58.921" transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)" width="40.001" height="16" />
-            <rect x="46.9" y="164.979" transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)" width="40.001" height="16" />
-            <rect x="46.947" y="315.048" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)" width="40.001" height="16" />
-
-            <rect x="164.966" y="409.112" transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)" width="16" height="39.999" />
-
-            <rect x="303.031" y="421.036" transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)" width="40.001" height="16" />
-
-            <rect x="409.088" y="315.018" transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)" width="40.001" height="16" />
-
-            <rect x="409.054" y="165.011" transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)" width="40.001" height="16" />
-            <rect x="315.001" y="46.895" transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)" width="16" height="39.999" />
-            <path d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392 c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z" />
-            <rect x="240" width="16" height="72" />
-            <rect x="62.097" y="90.096" transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.0963 -40.6334)" width="71.999" height="16" />
-            <rect y="240" width="72" height="16" />
-
-            <rect x="90.091" y="361.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)" width="16" height="71.999" />
-            <rect x="240" y="424" width="16" height="72" />
-
-            <rect x="361.881" y="389.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)" width="71.999" height="16" />
-            <rect x="424" y="240" width="72" height="16" />
-            <rect x="389.911" y="62.091" transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6357)" width="16" height="71.999" />
-          </svg>
-          <svg version="1.1" class="moon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.739 49.739" style="enable-background:new 0 0 49.739 49.739;" xml:space="preserve">
-            <path d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268
-       c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0
-       c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822
-       C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253
-       c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748
-       c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z" />
-          </svg>
-        </label>
-      </div>
-      <div class="nav__toggle" id="nav-toggle">
-        <div class="menu__toggler"><span></span></div>
-        <!-- <i class='bx bx-menu'></i> -->
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="bx bx-sun theme-toggle__icon theme-toggle__icon--light"></i>
+          <i class="bx bx-moon theme-toggle__icon theme-toggle__icon--dark"></i>
+        </button>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
       </div>
     </nav>
   </header>
 
-  <main class="l-main">
-    <!--===== HOME =====-->
-    <!-- <section class="home" id="home">
-      <div class="home__container bd-grid">
-        <h1 class="home__title">
-          <span>HE</span>
-          <br>LLO
-        </h1>
-        <img src="assets/img/20211003_190800_50.png" alt="" class="home__img">
-        <div class="home__scroll">
-          <a href="#about" class="home__scroll-link">
-            <i class='bx bx-up-arrow-alt'></i>Scroll down </a>
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero__container container">
+        <div class="hero__content">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__title">Sanjay Mannekote Revanna</h1>
+          <p class="hero__subtitle">Business Management Student &nbsp;·&nbsp; Tech Enthusiast &nbsp;·&nbsp; Team Leader</p>
+          <p class="hero__description">
+            BSc student at Lancaster University with a passion for technology, leadership, and building solutions that make a difference.
+          </p>
+          <div class="hero__buttons">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--outline">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero__image">
+          <img src="assets/img/DSC08738.JPG" alt="Sanjay Mannekote Revanna">
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!--===== ABOUT =====-->
-    <section class="about section" id="about">
-      <h2 class="section-title">About</h2>
-      <div class="about__container bd-grid">
-        <div class="about__img">
-          <img src="assets/img/DSC08738.JPG" id="profile" alt="Profile Picture">
-        </div>
-        <!-- <div class="name">
-          <img src="assets/sun.svg" data-light-src="assets/sun.svg" data-dark-src="assets/moon.svg" alt="light theme" id="theme-selector" onclick="switchTheme(this)"> 
-          <p class="about__subtitle1">Hi, I’m
-            <img class="title-bg-image" src="https://user-images.githubusercontent.com/71520844/194271195-ad23bda8-1939-4be3-985a-008c389ac808.svg">
-            <span>Shravan </span><i class="fas fa-code" aria-hidden="true"></i>
-          </p>
-          <h1>
-            <span class="text_1">Self taught Web Developer</span>
-            <span class="text_2">Passionate Android Developer</span>
-          </h1>
-        </div> -->
-        <div>
-          <div class="name">
-            <p class="about__subtitle1">This is
-              <span>Sanjay </span><i class="fas fa-code" aria-hidden="true"></i>
-            </p>
-            <!-- <h1>
-              <span class="text_1">Self taught Web Developer</span>
-              <span class="text_2">Passionate Android Developer</span>
-            </h1> -->
-          </div>
-          <div class="backani">
-            <!-- <p>A little about myself :<br>I am currently in First-Year, pursuing a
-              Computer Science and Engineering (Spl. AI & ML) degree from the
-              <b>Ramaiah Institute of Technology</b>, Bangalore.<br><br> Apart from academics, I invest a
-              significant amount of time in learning and practising Coding. Right now, I'm concentrating on
-              App development (Flutter) and Working on Full-Stack Web
-              Development. My Goal is to Contribute to as many open source project as possible. I also have
-              keen interest in UX/UI Design, but I still
-              wish to
-              explore other fields as well.
-            </p> -->
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <p class="section__subtitle">A little about who I am</p>
 
-            <p>
-              Curious about me?<br>
-              <!-- Well Well Well, since you're here, might as well read this stupid intro eh?<br> -->
-            </p>
-            <!-- <p class="abtli">🌝 You already know my name, it's like right there</p> -->
-            <p class="abtli">💻 I am a <b>Business Managemnt</b> student at <b>Lancaster University</b></p>
-            <p class="abtli">🤔 What have I created? Not much... yet! But stick around – there’s more to come!</p>
-            <p class="abtli">💪 I’m also an athlete and led my school’s boarding team to victory. Team spirit and leadership? Got it covered.</p>
-            <p class="abtli">💡 Plus, I’ve got a good grasp of tech skills. Check out some examples below!</p>
-            <p class="abtli">😊 You’ll spot a few more skills here and there. Trust me, they’ll come in handy!</p>
-            <!-- <ul>
-              <li class="abtli">🌝 You already know my name, it's like right there</li>
-              <li class="abtli">💻 I'm Currently working at <b> Foodingo</b> Pvt. Ltd as Full Stack Developer</li>
-              <li class="abtli">🤔 What I've created? I've created bunch of Websites, Dashboards, Mobile Apps 📱. You can find em <a href="https://github.com/githubhosting?tab=repositories">here</a></li>
-              <li class="abtli">😎 I built a Study Material Website that everyone uses to prepare for, just days before exams</li>
-              <li class="abtli">💡 Other than this, I've also worked with tons of other technologies mentioned below</li>
-              <li class="abtli">🤭 Yall can find few projects but trust me most of the projects are private (just like you, you sneaky sneaky)</li>
-            </ul> -->
-            <br>
-            <!-- <p>My Goal is to Contribute to as many open source project as possible and also create something that can
-              save time of people. PERIOD. <br><i>mm idk what else to write, let's get to know you</i></p> -->
+        <div class="about__grid">
+          <div class="card about__card">
+            <p class="about__intro">Curious about me? Here's a quick snapshot:</p>
+            <ul class="about__list">
+              <li><span class="about__emoji">💻</span> Business Management student at <strong>Lancaster University</strong></li>
+              <li><span class="about__emoji">🤔</span> What have I created? Not much... yet! But stick around — there's more to come!</li>
+              <li><span class="about__emoji">💪</span> Athlete who led my school's boarding team to victory. Team spirit and leadership? Got it covered.</li>
+              <li><span class="about__emoji">💡</span> Good grasp of tech skills — check out some examples below!</li>
+              <li><span class="about__emoji">😊</span> You'll spot a few more skills here and there. Trust me, they'll come in handy!</li>
+            </ul>
           </div>
-          <div class="social-share-inner-left">
-            <span class="title">Find my social here</span>
-          </div>
-          <div class="social-container">
-            <div class="about__social">
-              <a href="https://www.linkedin.com/in/sanjay-mannekote-revanna/" target="_blank" class="about__social-icon">
-                <i class='bx bxl-linkedin'></i>
+
+          <div class="about__social-block">
+            <p class="about__social-label">Find me on</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/sanjay-mannekote-revanna/" target="_blank" rel="noopener" class="social-links__item" aria-label="LinkedIn">
+                <i class="bx bxl-linkedin"></i>
               </a>
-              <a href="https://github.com/sanjay-124" target="_blank" class="about__social-icon">
-                <i class='bx bxl-github'></i>
+              <a href="https://github.com/sanjay-124" target="_blank" rel="noopener" class="social-links__item" aria-label="GitHub">
+                <i class="bx bxl-github"></i>
               </a>
-              <a href="https://www.instagram.com/sanjay.drafts/" target="_blank" class="about__social-icon">
-                <i class='bx bxl-instagram'></i>
+              <a href="https://www.instagram.com/sanjay.drafts/" target="_blank" rel="noopener" class="social-links__item" aria-label="Instagram">
+                <i class="bx bxl-instagram"></i>
               </a>
             </div>
           </div>
         </div>
-    </section>
-    <!--===== SKILLS =====-->
-    <section class="skills section1" id="likes">
-
-      <h2 class="section-title1">More about</h2>
-      <div class="likes__container bd-grid parent">
-
-        <div class="skills__name1">
-          <h3 class="skills__name2">JW Marriot Hotel (Intern)</h3>
-          <p> • Gained hands-on experience across various hotel departments, including HumanResources, Marketing, and Culinary.
-       <br>
-            • Developed insights into hotel operations, focusing on guest services, departmental coordination, and food presentation techniques</p>
-        </div>
-
-        <div class="skills__name1">
-          <h3 class="skills__name2"> Student Council</h3>
-          <p>   • Developed a communication platform for the student council to facilitate announcements, event updates, and feedback. <br>
-            • This platform enable real-time interaction between the student body and the council, enhancing responsiveness.</p>
-        </div>
-
-        <div class="skills__name1">
-          <h3 class="skills__name2">Tuckshop</h3>
-          <p> • Created an online ordering system for the campus shop to streamline the process for boarding students to order items. 
-           <br> • The system facilitated easy access, reduced wait times, and provided features for account management, including balance updates and transaction tracking.</p>
-        </div>
-
-        <div class="skills__name1">
-          <h3 class="skills__name2">Boarding Event Planning and Logistics, Coordinator</h3>
-          <p>Organized events like sports matches, themed nights, and cultural celebrations. Managed event logistics, decision-making.</p>
-        </div>
-        
-        <div class="skills__name1">
-          <h3 class="skills__name2">Boarding Tuckshop, Stewardship</h3>
-          <p> • <b>Notion</b>, enhancing efficiency and accessibility for financial records.
-            <br> • <b>Website</b>, to streamline orders and improve user experience.</p>
-        </div>
-
-        <div class="skills__name1">
-          <h3 class="skills__name2">Boarding Basketball Team, Tutor</h3>
-          <p><b>Inter-Boarding Basketball Championships.</b> Played a key role in the boarding school basketball teams. I led the boy's team and secured a trophy.</p>
-        </div>
-
-        <div class="skills__name1">
-          <h3 class="skills__name2">Extended Essay</h3>
-          <p>Researched the topic “To what extent has the Prime membership program been a profitable growth strategy for Amazon?” An in-depth analysis on growth strategies in real-world applications.</p>
-        </div>
-  
-        <div class="skills__name1">
-          <h3 class="skills__name2">Business Analysis</h3>
-          <p>Analyzed businesses using tools like PESTLE and STEEPLE, enhancing understanding of business strategies</p>
-        </div>
-  
-        <div class="skills__name1">
-          <h3 class="skills__name2">Workshops</h3>
-          <p>Assisted in Cultural and Traditional workshops. Art workshops. Fundraising stalls.</p>
       </div>
-  
-      <div class="skills__name1">
-        <h3 class="skills__name2">Fundraisers</h3>
-        <p>Digital Recycle Management Club. Bake Sales. School Tournaments.</p>
-      </div>
-      </div>
-
-      
     </section>
 
-    <section class="skills section" id="skills">
-      <h2 class="section-title">Tech Skills</h2>
-      <div class="skills__container bd-grid">
-        <div class="skills__box">
+    <!-- Experience -->
+    <section class="section section--alt experience" id="experience">
+      <div class="container">
+        <h2 class="section__title">Experience</h2>
+        <p class="section__subtitle">Roles, projects, and achievements</p>
 
-          <h3 class="skills__subtitle">Languages and Frameworks</h3>
-          <!-- <span class="skills__name"><i class="devicon-nextjs-original"></i> NextJS</span> -->
-          <span class="skills__name"><i class="devicon-react-original"></i> React</span>
-          <!-- <span class="skills__name"><i class="devicon-nodejs-plain"></i> Node.js</span> -->
-          <!-- <span class="skills__name"><i class="devicon-python-plain"></i> Python</span> -->
-          <span class="skills__name"><i class="devicon-firebase-plain"></i> Firebase</span>
-          <span class="skills__name"><i class="devicon-tailwindcss-plain"></i> Tailwind</span>
-          <span class="skills__name"><i class="devicon-html5-plain"></i> HTML</span>
-          <!-- <span class="skills__name"><i class="devicon-css3-plain"></i> CSS</span> -->
-          <span class="skills__name"><i class="devicon-javascript-plain"></i> Javascript</span>
-          <h3 class="skills__subtitle">Tools I Use</h3>
-          <span class="skills__name"><i class="devicon-github-original"></i> Github</span>
-          <span class="skills__name"><i class="devicon-visualstudio-plain"></i> VS Code</span>
-          <!-- <span class="skills__name"><i class="devicon-figma-plain"></i> Figma</span> -->
-          <span class="skills__name"><i class="devicon-canva-original"></i> Canva</span>
-          <span class="skills__name"><i class="devicon-git-plain"></i> Git</span>
-        </div>
-        <div class="skills__img">
-          <img src="assets/img/skill.jpg" alt="">
+        <div class="card-grid">
+          <div class="card card--hover">
+            <h3 class="card__title">JW Marriott Hotel (Intern)</h3>
+            <p class="card__text">Gained hands-on experience across various hotel departments, including Human Resources, Marketing, and Culinary. Developed insights into hotel operations, focusing on guest services, departmental coordination, and food presentation techniques.</p>
+          </div>
+          <div class="card card--hover">
+            <h3 class="card__title">Student Council</h3>
+            <p class="card__text">Developed a communication platform for the student council to facilitate announcements, event updates, and feedback. Enabled real-time interaction between the student body and the council, enhancing responsiveness.</p>
+          </div>
+          <div class="card card--hover">
+            <h3 class="card__title">Tuckshop</h3>
+            <p class="card__text">Created an online ordering system for the campus shop to streamline the process for boarding students. The system facilitated easy access, reduced wait times, and provided account management features.</p>
+          </div>
+          <div class="card card--hover">
+            <h3 class="card__title">Boarding Event Planning & Logistics</h3>
+            <p class="card__text">Organized events like sports matches, themed nights, and cultural celebrations. Managed event logistics and decision-making as Coordinator.</p>
+          </div>
+          <div class="card card--hover">
+            <h3 class="card__title">Boarding Tuckshop Stewardship</h3>
+            <p class="card__text">Managed financial records using <strong>Notion</strong> and built a <strong>website</strong> to streamline orders and improve user experience.</p>
+          </div>
+          <div class="card card--hover">
+            <h3 class="card__title">Boarding Basketball Team, Tutor</h3>
+            <p class="card__text">Played a key role in the boarding school basketball teams. Led the boys' team and secured a trophy at the <strong>Inter-Boarding Basketball Championships</strong>.</p>
+          </div>
+          <div class="card card--hover">
+            <h3 class="card__title">Extended Essay</h3>
+            <p class="card__text">Researched "To what extent has the Prime membership program been a profitable growth strategy for Amazon?" — an in-depth analysis on growth strategies in real-world applications.</p>
+          </div>
+          <div class="card card--hover">
+            <h3 class="card__title">Business Analysis</h3>
+            <p class="card__text">Analyzed businesses using tools like PESTLE and STEEPLE, enhancing understanding of business strategies.</p>
+          </div>
+          <div class="card card--hover">
+            <h3 class="card__title">Workshops</h3>
+            <p class="card__text">Assisted in Cultural and Traditional workshops, Art workshops, and Fundraising stalls.</p>
+          </div>
+          <div class="card card--hover">
+            <h3 class="card__title">Fundraisers</h3>
+            <p class="card__text">Digital Recycle Management Club. Bake Sales. School Tournaments.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section__title">Tech Skills</h2>
+        <p class="section__subtitle">Technologies and tools I work with</p>
 
-    <section class="skills section1" id="likes">
-
-      <h2 class="section-title1">Hobbies</h2>
-      <div class="likes__container bd-grid parent">
-
-        <div class="skills__name1">
-          <p><i class="fas fa-headphones skills__namei" aria-hidden="true"></i> Listening to Music</p>
-        </div>
-
-        <div class="skills__name1">
-          <p><i class="fas fa-laptop-code skills__namei" aria-hidden="true"></i> Building Websites</p>
-        </div>
-
-        <div class="skills__name1">
-          <p><i class="fas fa-basketball-ball" aria-hidden="true"></i> Playing Sports</p>
-        </div>
-
-        <div class="skills__name1">
-          <p><i class="fas fa-users"></i> Engage in Socials</p>
-        </div>
-      </div>
-    </section>
-
-
-    <!--===== PORTFOLIO =====-->
-    <section class="portfolio section" id="projects">
-      <h2 class="section-title1">My Web Projects</h2>
-
-      <div class="portfolio__container1 bd-grid">
-
-        <div class="portfolio__img">
-          <img src="assets/img/student-council.png" alt="">
-          <div class="portfolio__link">
-            <a href="https:/studentcouncil.vercel.app/" target="_blank" class="portfolio__link-name">Visit
-              Website</a>
+        <div class="skills__grid">
+          <div class="skills__content">
+            <h3 class="skills__group-title">Languages & Frameworks</h3>
+            <div class="skills__tags">
+              <span class="skill-tag"><i class="devicon-react-original"></i> React</span>
+              <span class="skill-tag"><i class="devicon-firebase-plain"></i> Firebase</span>
+              <span class="skill-tag"><i class="devicon-tailwindcss-plain"></i> Tailwind</span>
+              <span class="skill-tag"><i class="devicon-html5-plain"></i> HTML</span>
+              <span class="skill-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
+            </div>
+            <h3 class="skills__group-title">Tools</h3>
+            <div class="skills__tags">
+              <span class="skill-tag"><i class="devicon-github-original"></i> GitHub</span>
+              <span class="skill-tag"><i class="devicon-visualstudio-plain"></i> VS Code</span>
+              <span class="skill-tag"><i class="devicon-canva-original"></i> Canva</span>
+              <span class="skill-tag"><i class="devicon-git-plain"></i> Git</span>
+            </div>
           </div>
-        </div>
-
-        <div class="portfolio__img">
-          <img src="assets/img/tuckshop.png" alt="">
-          <div class="portfolio__link">
-            <a href="https://tuckshop-vite.vercel.app/" class="portfolio__link-name">Visit Website</a>
-          </div>
-        </div>
-
-    </section>
-
-
-
-    <!-- education section starts -->
-    <section class="education" id="education">
-      <h2 class="education-title">Education</h2>
-      <p class="quote">
-        Education is not the learning of facts, but the training of the mind to think.
-      </p>
-      <div class="box-container">
-        <div class="box">
-          <div class="image">
-            <a href="https://www.lancaster.ac.uk/" target="_blank">
-              <img draggable="false" src="assets/img/lancaster.png" alt="">
-          </div>
-
-          <div class="content">
-            <h3>Lancaster University, Lancaster</h3>
-            <!-- <h5>Ranked No.2 in Karnataka and 65th among Engineering Institutions across the Country.</h5> -->
-            <p>BSc Honours Business Managemnt</p>
-            <h4>2024 - 27</h4>
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="image">
-            <a href="https://www.canadianinternationalschool.com/l" target="_blank">
-              <img draggable="false" src="assets/img/canadian.jpg" alt="">
-          </div>
-          <div class="content">
-            <h3>Canadian International School, Bangalore</h3>
-            <!-- <h5>Ranked No.1 coaching institute for 'Engineering Entrance Examinations' in India.</h5> -->
-            <p>Secondary High School</p>
-            <h4>2022 - 24</h4>
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="image">
-            <a href="https://donboscoicseschoolchitradurga.com/" target="_blank">
-              <img draggable="false" src="assets/img/don-bosco.jpg" alt="">
-          </div>
-          <div class="content">
-            <h3> Don Bosco ICSE School, Chitradurga</h3>
-            <!-- <h5>Ranked No.1 in India under the category of 'Top day cum boarding school'.</h5> -->
-            <p>High School | ICSE</p>
-            <h4>2019 - 22</h4>
-            </a>
+          <div class="skills__image">
+            <img src="assets/img/skill.jpg" alt="Tech skills illustration">
           </div>
         </div>
       </div>
     </section>
-    <!--===== CONTACT =====-->
-    <section class="contact section" id="contact">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact__container bd-grid">
-        <div class="contact__info">
-          <h3 class="contact__subtitle">EMAIL</h3>
-          <span class="contact__text1">
-            <a href="mailto:shravanrevanna158@gmail.com">mrsanjay2709@gmail.com</a>
-          </span>
-          <h3 class="contact__subtitle">PHONE</h3>
-          <span class="contact__text1">
-            <a href="tel:8088574169">+91 8088574169</a>
-            <a href="tel:07887121830">+44 7887121830</a>
-          </span>
+
+    <!-- Hobbies -->
+    <section class="section section--alt hobbies" id="hobbies">
+      <div class="container">
+        <h2 class="section__title">Hobbies</h2>
+        <p class="section__subtitle">What I enjoy outside of work</p>
+
+        <div class="hobbies__grid">
+          <div class="card card--hover hobby-card">
+            <i class="fas fa-headphones hobby-card__icon"></i>
+            <span>Listening to Music</span>
+          </div>
+          <div class="card card--hover hobby-card">
+            <i class="fas fa-laptop-code hobby-card__icon"></i>
+            <span>Building Websites</span>
+          </div>
+          <div class="card card--hover hobby-card">
+            <i class="fas fa-basketball-ball hobby-card__icon"></i>
+            <span>Playing Sports</span>
+          </div>
+          <div class="card card--hover hobby-card">
+            <i class="fas fa-users hobby-card__icon"></i>
+            <span>Engage in Socials</span>
+          </div>
         </div>
-        <!--<form action="" class="contact__form"><div class="contact__inputs"><input type="text" placeholder="Name" class="contact__input"><input type="mail" placeholder="Email" class="contact__input"></div><textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea><span class="contact__text1">Submission not initialized, to Contact me get social link bellow</span><input type="submit" value="Submit" class="contact__button"></form>-->
       </div>
     </section>
+
+    <!-- Projects -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="section__title">Projects</h2>
+        <p class="section__subtitle">Web projects I've built</p>
+
+        <div class="projects__grid">
+          <div class="project-card">
+            <div class="project-card__image">
+              <img src="assets/img/student-council.png" alt="Student Council website">
+            </div>
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Student Council</h3>
+              <a href="https://studentcouncil.vercel.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Visit Website</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card__image">
+              <img src="assets/img/tuckshop.png" alt="Tuckshop website">
+            </div>
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Tuckshop</h3>
+              <a href="https://tuckshop-vite.vercel.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Visit Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section section--alt education" id="education">
+      <div class="container">
+        <h2 class="section__title">Education</h2>
+        <p class="section__subtitle education__quote">"Education is not the learning of facts, but the training of the mind to think."</p>
+
+        <div class="education__grid">
+          <a href="https://www.lancaster.ac.uk/" target="_blank" rel="noopener" class="card card--hover education-card">
+            <div class="education-card__image">
+              <img src="assets/img/lancaster.png" alt="Lancaster University" draggable="false">
+            </div>
+            <div class="education-card__content">
+              <h3>Lancaster University, Lancaster</h3>
+              <p>BSc Honours Business Management</p>
+              <span class="education-card__year">2024 – 2027</span>
+            </div>
+          </a>
+          <a href="https://www.canadianinternationalschool.com/l" target="_blank" rel="noopener" class="card card--hover education-card">
+            <div class="education-card__image">
+              <img src="assets/img/canadian.jpg" alt="Canadian International School" draggable="false">
+            </div>
+            <div class="education-card__content">
+              <h3>Canadian International School, Bangalore</h3>
+              <p>Secondary High School</p>
+              <span class="education-card__year">2022 – 2024</span>
+            </div>
+          </a>
+          <a href="https://donboscoicseschoolchitradurga.com/" target="_blank" rel="noopener" class="card card--hover education-card">
+            <div class="education-card__image">
+              <img src="assets/img/don-bosco.jpg" alt="Don Bosco ICSE School" draggable="false">
+            </div>
+            <div class="education-card__content">
+              <h3>Don Bosco ICSE School, Chitradurga</h3>
+              <p>High School | ICSE</p>
+              <span class="education-card__year">2019 – 2022</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section__title">Contact</h2>
+        <p class="section__subtitle">Let's connect</p>
+
+        <div class="contact__grid">
+          <div class="card contact-card">
+            <i class="bx bx-envelope contact-card__icon"></i>
+            <h3>Email</h3>
+            <a href="mailto:mrsanjay2709@gmail.com">mrsanjay2709@gmail.com</a>
+          </div>
+          <div class="card contact-card">
+            <i class="bx bx-phone contact-card__icon"></i>
+            <h3>Phone</h3>
+            <a href="tel:+918088574169">+91 8088574169</a>
+            <a href="tel:+447887121830">+44 7887121830</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <!--===== FOOTER =====-->
-  <footer class="footer section">
-    <div class="footer__container bd-gridf">
-      <div class="footer__data">
-        <h2 class="footer__title">- SANJAY</h2>
-        <p class="footer__text">I’m a fresher, just stepping onto a bigger stage. This site is a glimpse into who I am, showcasing my skills and achievements.
-          <br> 
-          More content is on the way – this is only the beginning! Stay tuned and check back often for updates!
-        </p>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <h2 class="footer__logo">Sanjay</h2>
+        <p>I'm a fresher, just stepping onto a bigger stage. This site is a glimpse into who I am — more content is on the way. Stay tuned!</p>
       </div>
-      <div class="footer__data">
-        <h2 class="footer__title">EXPLORE</h2>
+      <div class="footer__links">
+        <h3>Explore</h3>
         <ul>
-          <!-- <li>
-            <a href="#home" class="footer__link">Home</a>
-          </li> -->
-          <li>
-            <a href="#about" class="footer__link">About</a>
-          </li>
-          <li>
-            <a href="#skills" class="footer__link">Skills</a>
-          </li>
-          <li>
-            <a href="#projects" class="footer__link">Projects</a>
-          </li>
-          <li>
-            <a href="#education" class="footer__link">Education</a>
-          </li>
-          <li>
-            <a href="#Contact" class="footer__link">Contact</a>
-          </li>
-          <li>
-            <a href="whatsapp://send?text=https://myselfshravan.github.io" data-action="share/whatsapp/share" target="_blank" class="footer__link">Share</a>
-          </li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      <div class="footer__data1">
-        <h2 class="footer__title">FOLLOW ME</h2>
-        <a href="https://github.com/sanjay-124" target="_blank" class="footer__social">
-          <i class='bx bxl-github'></i></a>
-
-        <a href="https://www.instagram.com/sanjay.drafts" target="_blank" class="footer__social">
-          <i class='bx bxl-instagram'></i>
-        </a>
-        <!-- <a href="https://m.facebook.com/Shravan.3.07" target="_blank" class="footer__social">
-          <i class='bx bxl-facebook'></i>
-        </a> -->
-
-        <!-- <a href="https://www.youtube.com/channel/UC5NNBFQqhbuU2f5wprDVaVg" target="_blank" class="footer__social"><i class='bx bxl-youtube'></i></a> -->
-
-        <a href="https://www.linkedin.com/in/sanjay-mannekote-revanna/" target="_blank" class="footer__social">
-          <i class='bx bxl-linkedin'></i>
-        </a>
-        <!-- <a href="https://telegram.me/siddharth_channel" target="_blank" class="footer__social">
-          <i class="bx bxl-telegram"></i>
-        </a> -->
-        <!-- <a href="https://linktr.ee/shravan_revanna" class="footer__social">
-          <i class="bx bx-link-alt"></i>
-        </a>
-
-        <a href="whatsapp://send?text=https://myselfshravan.github.io/shravan.github.io" data-action="share/whatsapp/share" target="_blank">Share </a> -->
+      <div class="footer__social">
+        <h3>Follow Me</h3>
+        <div class="social-links">
+          <a href="https://github.com/sanjay-124" target="_blank" rel="noopener" class="social-links__item" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.instagram.com/sanjay.drafts" target="_blank" rel="noopener" class="social-links__item" aria-label="Instagram">
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sanjay-mannekote-revanna/" target="_blank" rel="noopener" class="social-links__item" aria-label="LinkedIn">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+        </div>
       </div>
-
     </div>
-
-    <a id="button"></a>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Sanjay Mannekote Revanna. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!--===== SCROLL REVEAL =====-->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="bx bx-chevron-up"></i>
+  </button>
+
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-
-  <!--===== MAIN JS =====-->
   <script src="assets/js/main.js"></script>
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 
 </html>

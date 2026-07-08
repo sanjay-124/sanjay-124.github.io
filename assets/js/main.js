@@ -1,181 +1,101 @@
-/*===== MENU SHOW =====*/
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+/* ===== Mobile Menu ===== */
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
-  }
-};
-showMenu("nav-toggle", "nav-menu");
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+    navToggle.classList.toggle("active");
+  });
+}
 
-const toggler = document.querySelector(".menu__toggler");
-const menu = document.querySelector(".menu");
-
-/*
- * Toggles on and off the 'active' class on the menu
- * and the toggler button.
- */
-toggler.addEventListener("click", () => {
-  toggler.classList.toggle("active");
-  menu.classList.toggle("active");
+document.querySelectorAll(".nav__link").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+    navToggle.classList.remove("active");
+  });
 });
 
-/*===== REMOVE MENU MOBILE =====*/
-const navLink = document.querySelectorAll(".nav__link");
-
-function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  navMenu.classList.remove("show");
-}
-navLink.forEach((n) => n.addEventListener("click", linkAction));
-
-/*===== SCROLL SECTIONS ACTIVE LINK =====*/
+/* ===== Active Nav Link on Scroll ===== */
 const sections = document.querySelectorAll("section[id]");
-
-window.addEventListener("scroll", scrollActive);
 
 function scrollActive() {
   const scrollY = window.pageYOffset;
 
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
+  sections.forEach((section) => {
+    const height = section.offsetHeight;
+    const top = section.offsetTop - 80;
+    const id = section.getAttribute("id");
+    const link = document.querySelector(`.nav__link[href="#${id}"]`);
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.add("active");
-    } else {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.remove("active");
+    if (link && scrollY > top && scrollY <= top + height) {
+      document.querySelectorAll(".nav__link").forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
     }
   });
 }
 
-/*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "50px",
-  duration: 1000,
-  reset: true,
-});
+window.addEventListener("scroll", scrollActive);
 
-/*SCROLL HOME*/
-sr.reveal(".home__title", {});
-sr.reveal(".home__scroll", { delay: 200 });
-sr.reveal(".home__img", { origin: "right", delay: 200 });
+/* ===== Theme Toggle ===== */
+const themeToggle = document.getElementById("theme-toggle");
+const html = document.documentElement;
 
-/*SCROLL ABOUT*/
-sr.reveal(".about__img", { origin: "top", delay: 300, reset: false });
-sr.reveal(".about__subtitle", { delay: 200 });
-sr.reveal(".about__subtitle1", { delay: 250 });
-sr.reveal(".text_1", { delay: 400 });
-sr.reveal(".text_2", { delay: 400 });
-// sr.reveal(".about__text", { delay: 500 });
-sr.reveal(".backani", { delay: 500 });
-sr.reveal(".abtli", { delay: 400, interval: 50 });
-sr.reveal(".social-share-inner-left span.title", { delay: 200 });
-sr.reveal(".about__social-icon", { delay: 200, interval: 150 });
-
-/*SCROLL SKILLS*/
-sr.reveal(".skills__subtitle", { origin: "top", reset: false });
-sr.reveal(".skills__name", {
-  origin: "top",
-  distance: "15px",
-  delay: 50,
-  interval: 100,
-});
-sr.reveal(".skills__name1", { distance: "15px", delay: 50, interval: 80 });
-sr.reveal(".skills__img", { delay: 200, reset: false });
-
-/*SCROLL PORTFOLIO*/
-sr.reveal(".portfolio__img", { interval: 150 });
-sr.reveal(".portfolio__imgt", { interval: 150 });
-
-/*SCROLL CONTACT*/
-sr.reveal(".contact__subtitle", {});
-sr.reveal(".contact__text", { interval: 200 });
-sr.reveal(".contact__text1", { interval: 200 });
-sr.reveal(".contact__input", { delay: 400 });
-sr.reveal(".contact__button", { delay: 600 });
-
-/* SCROLL EDUCATION */
-sr.reveal(".education .box", { interval: 200, reset: false });
-sr.reveal(".education .box .content .box img .box-container .box .image", {
-  delay: 300,
-  reset: false,
-});
-
-var btn = $("#button");
-
-$(window).scroll(function () {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass("show");
-  } else {
-    btn.removeClass("show");
-  }
-});
-
-btn.on("click", function (e) {
-  e.preventDefault();
-  $("html, body").animate({ scrollTop: 0 }, "300");
-});
-
-const btntog = document.querySelector(".btn-toggle");
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-const currentTheme = localStorage.getItem("theme");
-if (currentTheme == "dark") {
-  document.body.classList.toggle("dark-theme");
-} else if (currentTheme == "light") {
-  document.body.classList.toggle("light-theme");
-}
-
-btntog.addEventListener("click", function () {
-  if (prefersDarkScheme.matches) {
-    document.body.classList.toggle("light-theme");
-    var theme = document.body.classList.contains("light-theme")
-      ? "light"
-      : "dark";
-  } else {
-    document.body.classList.toggle("dark-theme");
-    var theme = document.body.classList.contains("dark-theme")
-      ? "dark"
-      : "light";
-  }
+function setTheme(theme) {
+  html.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
-});
-
-$(document).ready(function () {
-  $(".btn-toggle").click(function () {
-    var $this = $(this);
-    $this.removeClass("btn-toggle");
-    $this.addClass("notliked");
-    $count = $(".likes-count");
-    $count.text(function (idx, txt) {
-      return +txt == 0
-        ? "\n myselfshravan.github.io/riddle1.html \n"
-        : +txt - 1;
-    });
-  });
-});
-
-function validateForm() {
-  let x = document.forms["myForm"]["fname"].value;
-  if (x != "coffin") {
-    alert("You Failed !!!");
-    return false;
-  }
 }
-function validateForm2() {
-  let x = document.forms["myForm2"]["fname2"].value;
-  if (x != "lawsuit") {
-    alert("You Failed !!!");
-    return false;
-  }
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  setTheme(savedTheme);
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  setTheme("dark");
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const current = html.getAttribute("data-theme");
+    setTheme(current === "dark" ? "light" : "dark");
+  });
+}
+
+/* ===== Back to Top ===== */
+const backToTop = document.getElementById("back-to-top");
+
+if (backToTop) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+/* ===== Scroll Reveal ===== */
+if (typeof ScrollReveal !== "undefined") {
+  const sr = ScrollReveal({
+    origin: "bottom",
+    distance: "30px",
+    duration: 800,
+    delay: 100,
+    easing: "ease-out",
+    reset: false,
+  });
+
+  sr.reveal(".hero__content > *", { interval: 100 });
+  sr.reveal(".hero__image", { origin: "right", delay: 200 });
+  sr.reveal(".section__title, .section__subtitle");
+  sr.reveal(".card", { interval: 80 });
+  sr.reveal(".skill-tag", { interval: 50 });
+  sr.reveal(".hobby-card", { interval: 100 });
+  sr.reveal(".project-card", { interval: 150 });
+  sr.reveal(".education-card", { interval: 150 });
+  sr.reveal(".contact-card", { interval: 150 });
+  sr.reveal(".about__social-block");
 }
