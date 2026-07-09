@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
@@ -24,338 +24,374 @@
 
 <body>
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#" class="nav__logo">Sanjay</a>
+  <!-- Mobile top bar -->
+  <div class="topbar">
+    <div class="topbar__identity">
+      <img src="assets/img/DSC08738.JPG" alt="Sanjay Mannekote Revanna" class="topbar__avatar">
+      <span class="topbar__name">Sanjay</span>
+    </div>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 
-      <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-        </ul>
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <div class="layout">
+
+    <!-- Sidebar: identity + nav (fixed on desktop, off-canvas on mobile) -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__top">
+        <img src="assets/img/DSC08738.JPG" alt="Sanjay Mannekote Revanna" class="sidebar__avatar">
+        <h1 class="sidebar__name">Sanjay Mannekote Revanna</h1>
+        <!-- <p class="sidebar__role">Business Management Student</p> -->
+        <!-- <p class="sidebar__bio">BSc student at Lancaster University with a passion for technology, leadership, and building solutions that make a difference.</p> -->
+
+        <nav>
+          <ul class="sidebar__nav-list" id="nav-menu">
+            <li><a href="#about" class="nav__link"><span class="nav__num">01</span> About</a></li>
+            <li><a href="#experience" class="nav__link"><span class="nav__num">02</span> Experience</a></li>
+            <li><a href="#skills" class="nav__link"><span class="nav__num">03</span> Skills</a></li>
+            <li><a href="#hobbies" class="nav__link"><span class="nav__num">04</span> Hobbies</a></li>
+            <!-- <li><a href="#projects" class="nav__link"><span class="nav__num">05</span> Projects</a></li> -->
+            <li><a href="#education" class="nav__link"><span class="nav__num">05</span> Education</a></li>
+            <li><a href="#contact" class="nav__link"><span class="nav__num">06</span> Contact</a></li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="nav__actions">
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-          <i class="bx bx-sun theme-toggle__icon theme-toggle__icon--light"></i>
-          <i class="bx bx-moon theme-toggle__icon theme-toggle__icon--dark"></i>
-        </button>
-        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
-          <span class="nav__toggle-bar"></span>
-          <span class="nav__toggle-bar"></span>
-          <span class="nav__toggle-bar"></span>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="hero__container container">
-        <div class="hero__content">
-          <p class="hero__greeting">Hello, I'm</p>
-          <h1 class="hero__title">Sanjay Mannekote Revanna</h1>
-          <p class="hero__subtitle">Business Management Student &nbsp;·&nbsp; Tech Enthusiast &nbsp;·&nbsp; Team Leader</p>
-          <p class="hero__description">
-            BSc student at Lancaster University with a passion for technology, leadership, and building solutions that make a difference.
-          </p>
-          <div class="hero__buttons">
-            <a href="#projects" class="btn btn--primary">View Projects</a>
-            <a href="#contact" class="btn btn--outline">Get in Touch</a>
-          </div>
-        </div>
-        <div class="hero__image">
-          <img src="assets/img/DSC08738.JPG" alt="Sanjay Mannekote Revanna">
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section about" id="about">
-      <div class="container">
-        <h2 class="section__title">About Me</h2>
-        <p class="section__subtitle">A little about who I am</p>
-
-        <div class="about__grid">
-          <div class="card about__card">
-            <p class="about__intro">Curious about me? Here's a quick snapshot:</p>
-            <ul class="about__list">
-              <li><span class="about__emoji">💻</span> Business Management student at <strong>Lancaster University</strong></li>
-              <li><span class="about__emoji">🤔</span> What have I created? Not much... yet! But stick around — there's more to come!</li>
-              <li><span class="about__emoji">💪</span> Athlete who led my school's boarding team to victory. Team spirit and leadership? Got it covered.</li>
-              <li><span class="about__emoji">💡</span> Good grasp of tech skills — check out some examples below!</li>
-              <li><span class="about__emoji">😊</span> You'll spot a few more skills here and there. Trust me, they'll come in handy!</li>
-            </ul>
-          </div>
-
-          <div class="about__social-block">
-            <p class="about__social-label">Find me on</p>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/sanjay-mannekote-revanna/" target="_blank" rel="noopener" class="social-links__item" aria-label="LinkedIn">
-                <i class="bx bxl-linkedin"></i>
-              </a>
-              <a href="https://github.com/sanjay-124" target="_blank" rel="noopener" class="social-links__item" aria-label="GitHub">
-                <i class="bx bxl-github"></i>
-              </a>
-              <a href="https://www.instagram.com/sanjay.drafts/" target="_blank" rel="noopener" class="social-links__item" aria-label="Instagram">
-                <i class="bx bxl-instagram"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section section--alt experience" id="experience">
-      <div class="container">
-        <h2 class="section__title">Experience</h2>
-        <p class="section__subtitle">Roles, projects, and achievements</p>
-
-        <div class="card-grid">
-          <div class="card card--hover">
-            <h3 class="card__title">JW Marriott Hotel (Intern)</h3>
-            <p class="card__text">Gained hands-on experience across various hotel departments, including Human Resources, Marketing, and Culinary. Developed insights into hotel operations, focusing on guest services, departmental coordination, and food presentation techniques.</p>
-          </div>
-          <div class="card card--hover">
-            <h3 class="card__title">Student Council</h3>
-            <p class="card__text">Developed a communication platform for the student council to facilitate announcements, event updates, and feedback. Enabled real-time interaction between the student body and the council, enhancing responsiveness.</p>
-          </div>
-          <div class="card card--hover">
-            <h3 class="card__title">Tuckshop</h3>
-            <p class="card__text">Created an online ordering system for the campus shop to streamline the process for boarding students. The system facilitated easy access, reduced wait times, and provided account management features.</p>
-          </div>
-          <div class="card card--hover">
-            <h3 class="card__title">Boarding Event Planning & Logistics</h3>
-            <p class="card__text">Organized events like sports matches, themed nights, and cultural celebrations. Managed event logistics and decision-making as Coordinator.</p>
-          </div>
-          <div class="card card--hover">
-            <h3 class="card__title">Boarding Tuckshop Stewardship</h3>
-            <p class="card__text">Managed financial records using <strong>Notion</strong> and built a <strong>website</strong> to streamline orders and improve user experience.</p>
-          </div>
-          <div class="card card--hover">
-            <h3 class="card__title">Boarding Basketball Team, Tutor</h3>
-            <p class="card__text">Played a key role in the boarding school basketball teams. Led the boys' team and secured a trophy at the <strong>Inter-Boarding Basketball Championships</strong>.</p>
-          </div>
-          <div class="card card--hover">
-            <h3 class="card__title">Extended Essay</h3>
-            <p class="card__text">Researched "To what extent has the Prime membership program been a profitable growth strategy for Amazon?" — an in-depth analysis on growth strategies in real-world applications.</p>
-          </div>
-          <div class="card card--hover">
-            <h3 class="card__title">Business Analysis</h3>
-            <p class="card__text">Analyzed businesses using tools like PESTLE and STEEPLE, enhancing understanding of business strategies.</p>
-          </div>
-          <div class="card card--hover">
-            <h3 class="card__title">Workshops</h3>
-            <p class="card__text">Assisted in Cultural and Traditional workshops, Art workshops, and Fundraising stalls.</p>
-          </div>
-          <div class="card card--hover">
-            <h3 class="card__title">Fundraisers</h3>
-            <p class="card__text">Digital Recycle Management Club. Bake Sales. School Tournaments.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="section skills" id="skills">
-      <div class="container">
-        <h2 class="section__title">Tech Skills</h2>
-        <p class="section__subtitle">Technologies and tools I work with</p>
-
-        <div class="skills__grid">
-          <div class="skills__content">
-            <h3 class="skills__group-title">Languages & Frameworks</h3>
-            <div class="skills__tags">
-              <span class="skill-tag"><i class="devicon-react-original"></i> React</span>
-              <span class="skill-tag"><i class="devicon-firebase-plain"></i> Firebase</span>
-              <span class="skill-tag"><i class="devicon-tailwindcss-plain"></i> Tailwind</span>
-              <span class="skill-tag"><i class="devicon-html5-plain"></i> HTML</span>
-              <span class="skill-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
-            </div>
-            <h3 class="skills__group-title">Tools</h3>
-            <div class="skills__tags">
-              <span class="skill-tag"><i class="devicon-github-original"></i> GitHub</span>
-              <span class="skill-tag"><i class="devicon-visualstudio-plain"></i> VS Code</span>
-              <span class="skill-tag"><i class="devicon-canva-original"></i> Canva</span>
-              <span class="skill-tag"><i class="devicon-git-plain"></i> Git</span>
-            </div>
-          </div>
-          <div class="skills__image">
-            <img src="assets/img/skill.jpg" alt="Tech skills illustration">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hobbies -->
-    <section class="section section--alt hobbies" id="hobbies">
-      <div class="container">
-        <h2 class="section__title">Hobbies</h2>
-        <p class="section__subtitle">What I enjoy outside of work</p>
-
-        <div class="hobbies__grid">
-          <div class="card card--hover hobby-card">
-            <i class="fas fa-headphones hobby-card__icon"></i>
-            <span>Listening to Music</span>
-          </div>
-          <div class="card card--hover hobby-card">
-            <i class="fas fa-laptop-code hobby-card__icon"></i>
-            <span>Building Websites</span>
-          </div>
-          <div class="card card--hover hobby-card">
-            <i class="fas fa-basketball-ball hobby-card__icon"></i>
-            <span>Playing Sports</span>
-          </div>
-          <div class="card card--hover hobby-card">
-            <i class="fas fa-users hobby-card__icon"></i>
-            <span>Engage in Socials</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section projects" id="projects">
-      <div class="container">
-        <h2 class="section__title">Projects</h2>
-        <p class="section__subtitle">Web projects I've built</p>
-
-        <div class="projects__grid">
-          <div class="project-card">
-            <div class="project-card__image">
-              <img src="assets/img/student-council.png" alt="Student Council website">
-            </div>
-            <div class="project-card__overlay">
-              <h3 class="project-card__title">Student Council</h3>
-              <a href="https://studentcouncil.vercel.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Visit Website</a>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-card__image">
-              <img src="assets/img/tuckshop.png" alt="Tuckshop website">
-            </div>
-            <div class="project-card__overlay">
-              <h3 class="project-card__title">Tuckshop</h3>
-              <a href="https://tuckshop-vite.vercel.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Visit Website</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="section section--alt education" id="education">
-      <div class="container">
-        <h2 class="section__title">Education</h2>
-        <p class="section__subtitle education__quote">"Education is not the learning of facts, but the training of the mind to think."</p>
-
-        <div class="education__grid">
-          <a href="https://www.lancaster.ac.uk/" target="_blank" rel="noopener" class="card card--hover education-card">
-            <div class="education-card__image">
-              <img src="assets/img/lancaster.png" alt="Lancaster University" draggable="false">
-            </div>
-            <div class="education-card__content">
-              <h3>Lancaster University, Lancaster</h3>
-              <p>BSc Honours Business Management</p>
-              <span class="education-card__year">2024 – 2027</span>
-            </div>
-          </a>
-          <a href="https://www.canadianinternationalschool.com/l" target="_blank" rel="noopener" class="card card--hover education-card">
-            <div class="education-card__image">
-              <img src="assets/img/canadian.jpg" alt="Canadian International School" draggable="false">
-            </div>
-            <div class="education-card__content">
-              <h3>Canadian International School, Bangalore</h3>
-              <p>Secondary High School</p>
-              <span class="education-card__year">2022 – 2024</span>
-            </div>
-          </a>
-          <a href="https://donboscoicseschoolchitradurga.com/" target="_blank" rel="noopener" class="card card--hover education-card">
-            <div class="education-card__image">
-              <img src="assets/img/don-bosco.jpg" alt="Don Bosco ICSE School" draggable="false">
-            </div>
-            <div class="education-card__content">
-              <h3>Don Bosco ICSE School, Chitradurga</h3>
-              <p>High School | ICSE</p>
-              <span class="education-card__year">2019 – 2022</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact" id="contact">
-      <div class="container">
-        <h2 class="section__title">Contact</h2>
-        <p class="section__subtitle">Let's connect</p>
-
-        <div class="contact__grid">
-          <div class="card contact-card">
-            <i class="bx bx-envelope contact-card__icon"></i>
-            <h3>Email</h3>
-            <a href="mailto:mrsanjay2709@gmail.com">mrsanjay2709@gmail.com</a>
-          </div>
-          <div class="card contact-card">
-            <i class="bx bx-phone contact-card__icon"></i>
-            <h3>Phone</h3>
-            <a href="tel:+918088574169">+91 8088574169</a>
-            <a href="tel:+447887121830">+44 7887121830</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <h2 class="footer__logo">Sanjay</h2>
-        <p>I'm a fresher, just stepping onto a bigger stage. This site is a glimpse into who I am — more content is on the way. Stay tuned!</p>
-      </div>
-      <div class="footer__links">
-        <h3>Explore</h3>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer__social">
-        <h3>Follow Me</h3>
+      <div class="sidebar__bottom">
         <div class="social-links">
-          <a href="https://github.com/sanjay-124" target="_blank" rel="noopener" class="social-links__item" aria-label="GitHub">
-            <i class="bx bxl-github"></i>
-          </a>
-          <a href="https://www.instagram.com/sanjay.drafts" target="_blank" rel="noopener" class="social-links__item" aria-label="Instagram">
-            <i class="bx bxl-instagram"></i>
-          </a>
           <a href="https://www.linkedin.com/in/sanjay-mannekote-revanna/" target="_blank" rel="noopener" class="social-links__item" aria-label="LinkedIn">
             <i class="bx bxl-linkedin"></i>
           </a>
+          <a href="https://github.com/sanjay-124" target="_blank" rel="noopener" class="social-links__item" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.instagram.com/sanjayy.m.r/" target="_blank" rel="noopener" class="social-links__item" aria-label="Instagram">
+            <i class="bx bxl-instagram"></i>
+          </a>
         </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="bx bx-sun theme-toggle__icon theme-toggle__icon--light"></i>
+          <i class="bx bx-moon theme-toggle__icon theme-toggle__icon--dark"></i>
+          <span class="theme-toggle__label">Light mode</span>
+        </button>
       </div>
-    </div>
-    <div class="footer__bottom">
-      <p>&copy; 2026 Sanjay Mannekote Revanna. All rights reserved.</p>
-    </div>
-  </footer>
+    </aside>
+
+    <!-- Scrolling content -->
+    <main class="content">
+      <div class="content__inner">
+
+        <!-- Intro -->
+        <section class="intro" id="home">
+          <p class="intro__eyebrow">Open to opportunities</p>
+          <h2 class="intro__title">I build things and <em>lead</em> teams.</h2>
+          <p class="intro__desc">
+            Inspired by entrepreneurship, driven by technology, and focused on creating meaningful impact through business.
+          </p>
+          <div class="intro__buttons">
+            <a href="#skills" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--outline">Get in Touch</a>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+          <div class="section__head">
+            <span class="section__num">01</span>
+            <h2 class="section__title">About Me</h2>
+          </div>
+          <p class="section__subtitle">A little about who I am</p>
+
+          <div class="about__grid">
+            <div class="card about__card">
+              <p class="about__intro">Curious about me? Here's a quick snapshot:</p>
+              <ul class="about__list">
+                <li><span class="about__emoji">💻</span> BSc student at Lancaster University with a passion for technology, leadership, and building solutions that make a difference.</li>
+                <li><span class="about__emoji">🤔</span> I'm interested in business analysis, economics, modelling</li>
+                <li><span class="about__emoji">💪</span> Competetive athlete, team player and leader </li>
+                <li><span class="about__emoji">💡</span> Tech enthusiast building projects with modern web technologies</li>
+                <!-- <li><span class="about__emoji">😊</span> You'll spot a few more skills here and there. Trust me, they'll come in handy!</li> -->
+              </ul>
+            </div>
+
+            <div class="card about__social-block">
+              <p class="about__social-label">Find me on</p>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/sanjay-mannekote-revanna/" target="_blank" rel="noopener" class="social-links__item" aria-label="LinkedIn">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="https://github.com/sanjay-124" target="_blank" rel="noopener" class="social-links__item" aria-label="GitHub">
+                  <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://www.instagram.com/sanjay.drafts/" target="_blank" rel="noopener" class="social-links__item" aria-label="Instagram">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section" id="experience">
+          <div class="section__head">
+            <span class="section__num">02</span>
+            <h2 class="section__title">Experience</h2>
+          </div>
+          <p class="section__subtitle">Roles, experience, and achievements</p>
+
+          <div class="experience__groups">
+
+            <div class="experience__group">
+              <h3 class="experience__group-title">Roles</h3>
+              <p class="skills__group-title">Taken part in Canadian International School, Bangalore</p>
+              <div class="card-grid">
+                <div class="card card--hover">
+                  <h3 class="card__title">Student Council</h3>
+                  <p class="card__text">Developed a communication platform for the student council to facilitate announcements, event updates, and feedback. Enabled real-time interaction between the student body and the council, enhancing responsiveness.</p>
+                </div>
+                <div class="card card--hover">
+                  <h3 class="card__title">Boarding Event Planning & Logistics</h3>
+                  <p class="card__text">Organized events like sports matches, themed nights, and cultural celebrations. Managed event logistics and decision-making as Coordinator.</p>
+                </div>
+                <div class="card card--hover">
+                  <h3 class="card__title">Boarding Tuckshop Stewardship</h3>
+                  <p class="card__text">Managed financial records using <strong>Notion</strong> and built a <strong>website</strong> to streamline orders and improve user experience.</p>
+                </div>
+                <div class="card card--hover">
+                  <h3 class="card__title">Boarding Basketball Team, Tutor</h3>
+                  <p class="card__text">Played a key role in the boarding school basketball teams. Led the boys' team and secured a trophy at the <strong>Inter-Boarding Basketball Championships</strong>.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="experience__group">
+              <h3 class="experience__group-title">Experience</h3>
+              <div class="card-grid">
+                <div class="card card--hover">
+                  <h3 class="card__title">JW Marriott Hotel (Intern)</h3>
+                  <p class="card__text">Gained hands-on experience across various hotel departments, including Human Resources, Marketing, and Culinary. Developed insights into hotel operations, focusing on guest services, departmental coordination, and food presentation techniques.</p>
+                  <p class="card__text">JW Marriott Hotel, Bangalore</p>
+                  <p class="education-card__year">Dec 2023 - Dec 2023</p>
+                </div>
+                <div class="card card--hover">
+                  <h3 class="card__title">Lancaster Superstore (Sales and operations assistant)</h3>
+                  <p class="card__text">Assisted customers with purchases, handled billing at the cashier, and ensured a smooth and friendly service experience. Managed restocking of items and helped organize the store layout to maintain cleanliness, efficiency, and easy product access.</p>
+                  <p class="card__text">Lancaster Superstore, Lancaster</p>
+                  <p class="education-card__year">Dec 2025 - Jun 2026</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="experience__group">
+              <h3 class="experience__group-title">Achievements</h3>
+              <div class="card-grid">
+                <!-- <div class="card card--hover">
+                  <h3 class="card__title">Extended Essay</h3>
+                  <p class="card__text">Researched "To what extent has the Prime membership program been a profitable growth strategy for Amazon?" — an in-depth analysis on growth strategies in real-world applications.</p>
+                </div> -->
+                <div class="card card--hover">
+                  <h3 class="card__title">The Dalkia Leadership and Outstanding Team</h3>
+                  <p class="card__text">Secured second position of The Dalkia Leadership and Outstanding Team in the year 2025-2026</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section" id="skills">
+          <div class="section__head">
+            <span class="section__num">03</span>
+            <h2 class="section__title">Tech Skills</h2>
+          </div>
+          <p class="section__subtitle">Technologies and tools I work with</p>
+
+          <h3 class="skills__group-title">Languages & Frameworks</h3>
+          <div class="skills__tags">
+            <span class="skill-tag"><i class="devicon-react-original"></i> React</span>
+            <span class="skill-tag"><i class="devicon-firebase-plain"></i> Firebase</span>
+            <span class="skill-tag"><i class="devicon-tailwindcss-plain"></i> Tailwind</span>
+            <span class="skill-tag"><i class="devicon-html5-plain"></i> HTML</span>
+            <span class="skill-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
+          </div>
+          <h3 class="skills__group-title">Tools</h3>
+          <div class="skills__tags">
+            <span class="skill-tag"><i class="devicon-github-original"></i> GitHub</span>
+            <span class="skill-tag"><i class="devicon-visualstudio-plain"></i> VS Code</span>
+            <span class="skill-tag"><i class="devicon-canva-original"></i> Canva</span>
+            <span class="skill-tag"><i class="devicon-git-plain"></i> Git</span>
+          </div>
+
+          <h3 class="skills__group-title">Web Projects I've Built</h3>
+          <div class="projects__grid">
+            <div class="project-card">
+              <div class="project-card__icon"><i class="bx bx-body"></i></div>
+              <h3 class="project-card__title">Student Council</h3>
+              <p class="project-card__desc">A communication platform built for the student council at Canadian International School to share announcements, event updates, and feedback</p>
+              <a href="https://studentcouncil.vercel.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Visit Website</a>
+            </div>
+            <div class="project-card">
+              <div class="project-card__icon"><i class="bx bx-store"></i></div>
+              <h3 class="project-card__title">Tuckshop</h3>
+              <p class="project-card__desc">An online ordering system for the Boarding Tuckshop at Canadian International School that replaced long queues with quick, account-based ordering — cutting wait times for boarding students.</p>
+              <a href="https://tuckshop-vite.vercel.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Visit Website</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hobbies -->
+        <section class="section" id="hobbies">
+          <div class="section__head">
+            <span class="section__num">04</span>
+            <h2 class="section__title">Hobbies</h2>
+          </div>
+          <p class="section__subtitle">What I enjoy outside of work</p>
+
+          <div class="hobbies__grid">
+            <div class="card card--hover hobby-card">
+              <i class="fas fa-headphones hobby-card__icon"></i>
+              <span>Listening to Music</span>
+            </div>
+            <div class="card card--hover hobby-card">
+              <i class="fas fa-laptop-code hobby-card__icon"></i>
+              <span>Building Websites</span>
+            </div>
+            <div class="card card--hover hobby-card">
+              <i class="fas fa-basketball-ball hobby-card__icon"></i>
+              <span>Playing Sports</span>
+            </div>
+            <div class="card card--hover hobby-card">
+              <i class="fas fa-users hobby-card__icon"></i>
+              <span>Engage in Socials</span>
+            </div>
+            <div class="card card--hover hobby-card">
+              <i class="fas fa-book hobby-card__icon"></i>
+              <span>Reading Books</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section" id="education">
+          <div class="section__head">
+            <span class="section__num">05</span>
+            <h2 class="section__title">Education</h2>
+          </div>
+          <p class="section__subtitle education__quote">"Education is not the learning of facts, but the training of the mind to think."</p>
+
+          <div class="education__grid">
+            <a href="https://www.lancaster.ac.uk/" target="_blank" rel="noopener" class="card card--hover education-card">
+              <div class="education-card__image">
+                <img src="assets/img/lancaster.png" alt="Lancaster University" draggable="false">
+              </div>
+              <div class="education-card__content">
+                <h3>Lancaster University, Lancaster</h3>
+                <p>BSc Honours Business Management</p>
+                <span class="education-card__year">2024 – 2027</span>
+              </div>
+            </a>
+            <a href="https://www.canadianinternationalschool.com/" target="_blank" rel="noopener" class="card card--hover education-card">
+              <div class="education-card__image">
+                <img src="assets/img/canadian.jpg" alt="Canadian International School" draggable="false">
+              </div>
+              <div class="education-card__content">
+                <h3>Canadian International School, Bangalore</h3>
+                <p>Secondary High School</p>
+                <span class="education-card__year">2022 – 2024</span>
+              </div>
+            </a>
+            <a href="https://dbicsecta.in/" target="_blank" rel="noopener" class="card card--hover education-card">
+              <div class="education-card__image">
+                <img src="assets/img/don-bosco.jpg" alt="Don Bosco ICSE School" draggable="false">
+              </div>
+              <div class="education-card__content">
+                <h3>Don Bosco ICSE School, Chitradurga</h3>
+                <p>High School | ICSE</p>
+                <span class="education-card__year">2019 – 2022</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+          <div class="section__head">
+            <span class="section__num">06</span>
+            <h2 class="section__title">Contact</h2>
+          </div>
+          <p class="section__subtitle">Let's connect</p>
+
+          <div class="contact__grid">
+            <div class="card contact-card">
+              <i class="bx bx-envelope contact-card__icon"></i>
+              <h3>Email</h3>
+              <a href="mailto:mrsanjay2709@gmail.com">mrsanjay2709@gmail.com</a>
+            </div>
+            <div class="card contact-card">
+              <i class="bx bx-phone contact-card__icon"></i>
+              <h3>Phone</h3>
+              <a href="tel:+918088574169">+91 8088574169</a>
+              <a href="tel:+447887121830">+44 7887121830</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer__grid">
+            <div class="footer__brand">
+              <h2 class="footer__logo">Sanjay</h2>
+              <p>I'm a fresher, just stepping onto a bigger stage. This site is a glimpse into who I am — more content is on the way. Stay tuned!</p>
+            </div>
+            <div class="footer__links">
+              <h3>Explore</h3>
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <!-- <li><a href="#projects">Projects</a></li> -->
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer__social">
+              <h3>Follow Me</h3>
+              <div class="social-links">
+                <a href="https://github.com/sanjay-124" target="_blank" rel="noopener" class="social-links__item" aria-label="GitHub">
+                  <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://www.instagram.com/sanjayy.m.r/" target="_blank" rel="noopener" class="social-links__item" aria-label="Instagram">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sanjay-mannekote-revanna/" target="_blank" rel="noopener" class="social-links__item" aria-label="LinkedIn">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p>&copy; 2026 Sanjay Mannekote Revanna. All rights reserved.</p>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+  </div>
 
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">
     <i class="bx bx-chevron-up"></i>
   </button>
+
+  <!-- Lightbox: click the profile photo to see it larger -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close">
+      <i class="bx bx-x"></i>
+    </button>
+    <img src="" alt="" class="lightbox__image" id="lightbox-image">
+  </div>
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="assets/js/main.js"></script>

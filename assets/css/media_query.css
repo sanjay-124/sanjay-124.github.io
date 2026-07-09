@@ -1,152 +1,133 @@
-/* ===== Responsive Layout ===== */
+/* ==========================================================================
+   Responsive breakpoints
+   ≥ 960px : fixed sidebar + scrolling content (two columns)
+   < 960px : sidebar becomes an off-canvas panel behind a compact top bar
+   ========================================================================== */
 
-@media screen and (max-width: 1024px) {
-  .hero__container {
-    gap: 2rem;
-  }
-
-  .hero__image img {
-    width: 280px;
-    height: 280px;
-  }
-
-  .about__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about__social-block {
-    flex-direction: row;
-    gap: 1.5rem;
-    padding: 1.5rem;
-  }
-
-  .about__social-label {
-    margin-bottom: 0;
-  }
-
-  .skills__grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .skills__image {
-    order: -1;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .footer__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer__brand {
-    grid-column: 1 / -1;
-  }
+/* ---------------------------------------------------------------------- */
+/* ≤ 1200px — slightly narrower sidebar to give content room               */
+/* ---------------------------------------------------------------------- */
+@media screen and (max-width: 1200px) {
+  :root { --sidebar-w: 320px; }
+  .content { padding-inline: var(--sp-6); }
 }
 
-@media screen and (max-width: 768px) {
-  .section {
-    padding: 3.5rem 0;
+/* ---------------------------------------------------------------------- */
+/* ≤ 960px — collapse to top bar + off-canvas sidebar                      */
+/* ---------------------------------------------------------------------- */
+@media screen and (max-width: 960px) {
+  :root {
+    --topbar-h: 60px;
+    --sp-9: 3.5rem;
   }
 
-  .section__title {
-    font-size: 1.65rem;
+  .layout { flex-direction: column; }
+
+  /* Compact top bar replacing the fixed sidebar */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    inset-inline: 0;
+    top: 0;
+    height: var(--topbar-h);
+    padding-inline: var(--sp-5);
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 70;
   }
 
-  .section__subtitle {
-    margin-bottom: 2rem;
+  .topbar__identity { display: flex; align-items: center; gap: var(--sp-3); }
+
+  .topbar__avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--border);
   }
 
-  .hero {
-    min-height: auto;
-    padding-top: calc(var(--header-height) + 2rem);
-    padding-bottom: 3rem;
+  .topbar__name {
+    font-family: var(--font-display);
+    font-size: var(--fs-base);
+    font-weight: 600;
   }
 
-  .hero__container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero__image {
-    order: -1;
-  }
-
-  .hero__image img {
-    width: 220px;
-    height: 220px;
-  }
-
-  .hero__description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero__buttons {
+  .sidebar-toggle {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
   }
 
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .projects__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .education-card {
-    flex-direction: column;
-  }
-
-  .education-card__image {
-    flex: none;
-    height: 180px;
-  }
-
-  .footer__grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .back-to-top {
-    bottom: 1.25rem;
-    right: 1.25rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .container {
-    padding: 0 1rem;
-  }
-
-  .hero__title {
-    font-size: 1.75rem;
-  }
-
-  .hero__subtitle {
-    font-size: 0.9rem;
-  }
-
-  .hero__buttons {
-    flex-direction: column;
+  .sidebar-toggle span {
+    height: 2px;
     width: 100%;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform var(--dur-base) var(--ease), opacity var(--dur-base) var(--ease);
   }
 
-  .hero__buttons .btn {
-    width: 100%;
+  .sidebar-toggle.is-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .sidebar-toggle.is-active span:nth-child(2) { opacity: 0; }
+  .sidebar-toggle.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Off-canvas sidebar */
+  .sidebar {
+    top: 0;
+    height: 100vh;
+    width: min(85vw, 360px);
+    transform: translateX(-100%);
+    transition: transform var(--dur-base) var(--ease);
+    box-shadow: var(--shadow-lg);
+    padding-top: calc(var(--topbar-h) + var(--sp-6));
   }
 
-  .hobbies__grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .sidebar.show-sidebar { transform: translateX(0); }
 
-  .contact__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .nav__menu {
+  .sidebar-backdrop {
     display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--dur-base) var(--ease), visibility var(--dur-base);
+    z-index: 55;
   }
+
+  .sidebar-backdrop.show-backdrop { opacity: 1; visibility: visible; }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: calc(var(--topbar-h) + var(--sp-7)) var(--sp-5) var(--sp-7);
+  }
+
+  /* Grid reflow */
+  .card-grid { grid-template-columns: 1fr; }
+  .hobbies__grid { grid-template-columns: repeat(2, 1fr); }
+  .education__grid { grid-template-columns: 1fr; }
+  .projects__grid { grid-template-columns: 1fr; }
+  .contact__grid { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--sp-5); }
+
+  .about__social-block { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------------------------------------------------------------------- */
+/* ≤ 560px — small phones                                                  */
+/* ---------------------------------------------------------------------- */
+@media screen and (max-width: 560px) {
+  .hobbies__grid { grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
+  .intro__buttons { flex-direction: column; align-self: stretch; }
+  .intro__buttons .btn { justify-content: center; width: 100%; }
+  .section__title { font-size: var(--fs-lg); }
+  .about__card, .about__social-block { padding: var(--sp-4); }
+
 }
